@@ -20,8 +20,8 @@ def main():
 
     flops2 = FlopCountAnalysis(a2, t)
     print("Multi-Head Attention FLOPs:", flops2.total())
-
-
+    
+    
 if __name__ == '__main__':
     main()
 
