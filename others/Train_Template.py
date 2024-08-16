@@ -1,8 +1,3 @@
-作者：王大队长
-链接：https://www.zhihu.com/question/523869554/answer/2560312612
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 import torch
 from torch import nn, optim
 from torch.optim.lr_scheduler import CosineAnnealingLR
