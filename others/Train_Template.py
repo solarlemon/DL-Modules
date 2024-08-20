@@ -48,7 +48,7 @@ def show_pic(dataloader):#展示dataloader里的6张图片
         plt.yticks([])
     plt.show()
 
-def get_net(): #获得预训练模型并冻住前面层的参数
+def get_net(): # 获得预训练模型并冻住前面层的参数
     net = timm.create_model('resnet50', pretrained=True, num_classes=10)
     print(summary(net, input_size=(128, 3, 224, 224)))
     '''Freeze all layers except the last layer(fc or classifier)'''
@@ -93,7 +93,7 @@ def train(net, loss, train_dataloader, valid_dataloader, device, batch_size, num
     best_acc = 0.0
     for epoch in range(num_epoch):
 
-        print("——————第 {} 轮训练开始——————".format(epoch + 1))
+        print("———————————第 {} 轮训练开始———————————".format(epoch + 1))
 
         # 训练开始
         net.train()

@@ -64,7 +64,7 @@ def train(dataloader, model, loss_fn, optimizer):
     for batch, (x, y) in enumerate(dataloader):
         # 前向传播
         x, y = x.to(device), y.to(device)
-        # 计算训练值
+        # 计算训练值  前向传播
         output = model(x)
         # 计算观测值（label）与训练值的损失函数
         cur_loss = loss_fn(output, y)
@@ -77,7 +77,7 @@ def train(dataloader, model, loss_fn, optimizer):
         # torch.sum()对输入的tensor数据的某一维度求和
         cur_acc = torch.sum(y == pred) / output.shape[0]
  
-        # 反向传播
+        # 反向传播和优化
         # 清空过往梯度
         optimizer.zero_grad()
         # 反向传播，计算当前梯度
